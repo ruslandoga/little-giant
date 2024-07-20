@@ -6,7 +6,7 @@ A small program that performs two functions:
 2. Act as S3 proxy for ClickHouse queries, e.g.
 
    ```sql
-   select avg(value) as 'average http requests for the last 7 days'
+   select timestamp, value as 'http_requests_total{job=webserver}'
    from s3('https://prometheus-on-s3.fly.dev/http_requests_total?job=webserver', Native)
    where timestamp > now() - interval '7 days';
    ```
