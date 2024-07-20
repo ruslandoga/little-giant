@@ -21,8 +21,12 @@ defmodule App.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:telemetry, "~> 1.2"},
+      {:telemetry_poller, "~> 1.1"},
+      {:telemetry_metrics, "~> 1.0"},
+      {:s3, "~> 0.1.0"},
+      {:mint, "~> 1.6"},
+      {:plug_cowboy, "~> 2.7"}
     ]
   end
 end
