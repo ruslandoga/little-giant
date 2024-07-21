@@ -6,7 +6,7 @@ A small program that performs many functions:
 1. Acts as S3 proxy with predicate pushdown for ClickHouse queries:
 
    ```console
-   $ curl https://install.clickhouse.com | sh
+   $ curl https://clickhouse.com | sh
    $ ./clickhouse local -q "select `timestamp`, `value` from s3('https://little-giant.fly.dev/http_requests_total?job=webserver') where `timestamp` > now() - interval '7 days'"
    ```
    
