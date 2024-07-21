@@ -1,5 +1,3 @@
-# Prometheus on S3
-
 A small program that performs many functions:
 
 1. Scrapes Prometheus endpoints and save the data in a compact format to S3
