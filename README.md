@@ -2,7 +2,7 @@ A little program that:
 
 1. Scrapes Prometheus /metrics and saves the samples in a compact format to S3
    
-   ```console
+   ```shell
    # target
    https://little-giant.fly.dev/metrics
    # scrape itself at /scrape/<base64url(target)>
