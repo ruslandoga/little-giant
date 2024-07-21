@@ -10,16 +10,14 @@ A small program that performs many functions:
    from s3('https://little-giant.fly.dev/http_requests_total?job=webserver')
    where `timestamp` > now() - interval '7 days';
    ```
+   
 1. Render markdown reports and dashboards by visiting `/report/base64url(<url>)`, e.g.:
 
-   Gist: https://gist.github.com/ruslandoga/aa30d466655846701c6e8ace2915a196
-   
-   Markdown: https://gist.githubusercontent.com/ruslandoga/aa30d466655846701c6e8ace2915a196/raw/f2e50e8d29d6946d7e56a0b58b796c1157911b39/report.md
-   
-   Report: https://little-giant.fly.dev/report/aHR0cHM6Ly9naXN0LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ydXNsYW5kb2dhL2FhMzBkNDY2NjU1ODQ2NzAxYzZlOGFjZTI5MTVhMTk2L3Jhdy9mMmU1MGU4ZDI5ZDY5NDZkN2U1NmEwYjU4Yjc5NmMxMTU3OTExYjM5L3JlcG9ydC5tZA
+   - [Gist](https://gist.github.com/ruslandoga/aa30d466655846701c6e8ace2915a196)
+   - [Raw markdown](https://gist.githubusercontent.com/ruslandoga/aa30d466655846701c6e8ace2915a196/raw/f2e50e8d29d6946d7e56a0b58b796c1157911b39/report.md)
+   - [Report](https://little-giant.fly.dev/report/aHR0cHM6Ly9naXN0LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ydXNsYW5kb2dhL2FhMzBkNDY2NjU1ODQ2NzAxYzZlOGFjZTI5MTVhMTk2L3Jhdy9mMmU1MGU4ZDI5ZDY5NDZkN2U1NmEwYjU4Yjc5NmMxMTU3OTExYjM5L3JlcG9ydC5tZA)
 
 1. Subscribe for [alerts](https://prometheus.io/docs/alerting/latest/overview/) using [Web Push notifications](https://web.dev/explore/notifications) by visiting `/alert/base64url(<promql>)`, e.g.:
 
-   PromQL: `avg(rate(network_bytes_total[1h])) > 10000000`
-   
-   Subscribe your browser: https://little-giant.fly.dev/alert/YXZnKHJhdGUobmV0d29ya19ieXRlc190b3RhbFsxaF0pKSA-IDEwMDAwMDAw
+   - PromQL: `avg(rate(network_bytes_total[1h])) > 10000000`
+   - [Subscribe link](https://little-giant.fly.dev/alert/YXZnKHJhdGUobmV0d29ya19ieXRlc190b3RhbFsxaF0pKSA-IDEwMDAwMDAw)
