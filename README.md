@@ -1,4 +1,4 @@
-A small program that performs many functions:
+A little program that:
 
 1. Scrapes Prometheus endpoints and save the data in a compact format to S3
 1. Acts as S3 proxy with predicate pushdown for ClickHouse queries:
