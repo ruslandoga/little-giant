@@ -1,6 +1,6 @@
 A little program that:
 
-1. Scrapes Prometheus /metrics and saves the samples in a compact format to S3
+1. Scrapes Prometheus /metrics and saves the samples in a compact format to S3:
    
    ```shell
    # target
