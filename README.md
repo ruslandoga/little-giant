@@ -5,7 +5,7 @@ A little program that:
    ```shell
    # target
    https://little-giant.fly.dev/metrics
-   # spawn a scraper
+   # scrape itself
    POST https://little-giant.fly.dev/scrape/little-giant.fly.dev/metrics
    ```
    
