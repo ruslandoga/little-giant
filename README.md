@@ -5,7 +5,9 @@ A little program that:
    ```shell
    # target
    https://little-giant.fly.dev/metrics
-   # scrape itself at /scrape/<base64url(target)>
+   # base64url(target)
+   aHR0cHM6Ly9saXR0bGUtZ2lhbnQuZmx5LmRldi9tZXRyaWNz
+   # spawn a scraper
    POST https://little-giant.fly.dev/scrape/aHR0cHM6Ly9saXR0bGUtZ2lhbnQuZmx5LmRldi9tZXRyaWNz
    ```
    
@@ -23,6 +25,8 @@ A little program that:
    https://gist.github.com/ruslandoga/aa30d466655846701c6e8ace2915a196
    # markdown
    https://gist.githubusercontent.com/ruslandoga/aa30d466655846701c6e8ace2915a196/raw/f2e50e8d29d6946d7e56a0b58b796c1157911b39/report.md
+   # base64url(markdown)
+   aHR0cHM6Ly9naXN0LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ydXNsYW5kb2dhL2FhMzBkNDY2NjU1ODQ2NzAxYzZlOGFjZTI5MTVhMTk2L3Jhdy9mMmU1MGU4ZDI5ZDY5NDZkN2U1NmEwYjU4Yjc5NmMxMTU3OTExYjM5L3JlcG9ydC5tZA
    # see report at /render/<base64url(url)>
    GET https://little-giant.fly.dev/render/aHR0cHM6Ly9naXN0LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ydXNsYW5kb2dhL2FhMzBkNDY2NjU1ODQ2NzAxYzZlOGFjZTI5MTVhMTk2L3Jhdy9mMmU1MGU4ZDI5ZDY5NDZkN2U1NmEwYjU4Yjc5NmMxMTU3OTExYjM5L3JlcG9ydC5tZA
    ```
@@ -32,6 +36,8 @@ A little program that:
    ```shell
    # promql
    avg(rate(network_bytes_total[1h])) > 10000000
+   # base64url(promql)
+   YXZnKHJhdGUobmV0d29ya19ieXRlc190b3RhbFsxaF0pKSA-IDEwMDAwMDAw
    # subscribe at /alerts/<base64url(promql)>
    GET https://little-giant.fly.dev/alerts/YXZnKHJhdGUobmV0d29ya19ieXRlc190b3RhbFsxaF0pKSA-IDEwMDAwMDAw
    # current alerts and subscriptions
