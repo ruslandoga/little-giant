@@ -5,10 +5,8 @@ A little program that:
    ```shell
    # target
    https://little-giant.fly.dev/metrics
-   # base64url(target)
-   aHR0cHM6Ly9saXR0bGUtZ2lhbnQuZmx5LmRldi9tZXRyaWNz
    # spawn a scraper
-   POST https://little-giant.fly.dev/scrape/aHR0cHM6Ly9saXR0bGUtZ2lhbnQuZmx5LmRldi9tZXRyaWNz
+   POST https://little-giant.fly.dev/scrape/little-giant.fly.dev/metrics
    ```
    
 1. Acts as S3 proxy with predicate pushdown for ClickHouse queries:
@@ -25,10 +23,8 @@ A little program that:
    https://gist.github.com/ruslandoga/aa30d466655846701c6e8ace2915a196
    # markdown
    https://gist.githubusercontent.com/ruslandoga/aa30d466655846701c6e8ace2915a196/raw/f2e50e8d29d6946d7e56a0b58b796c1157911b39/report.md
-   # base64url(markdown)
-   aHR0cHM6Ly9naXN0LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ydXNsYW5kb2dhL2FhMzBkNDY2NjU1ODQ2NzAxYzZlOGFjZTI5MTVhMTk2L3Jhdy9mMmU1MGU4ZDI5ZDY5NDZkN2U1NmEwYjU4Yjc5NmMxMTU3OTExYjM5L3JlcG9ydC5tZA
-   # see report at /render/<base64url(url)>
-   GET https://little-giant.fly.dev/render/aHR0cHM6Ly9naXN0LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ydXNsYW5kb2dhL2FhMzBkNDY2NjU1ODQ2NzAxYzZlOGFjZTI5MTVhMTk2L3Jhdy9mMmU1MGU4ZDI5ZDY5NDZkN2U1NmEwYjU4Yjc5NmMxMTU3OTExYjM5L3JlcG9ydC5tZA
+   # generated report
+   GET https://little-giant.fly.dev/render/gist.githubusercontent.com/ruslandoga/aa30d466655846701c6e8ace2915a196/raw/f2e50e8d29d6946d7e56a0b58b796c1157911b39/report.md
    ```
 
 1. Subscribes your browser for [alerts](https://prometheus.io/docs/alerting/latest/overview/) using [Web Push API:](https://web.dev/explore/notifications)
