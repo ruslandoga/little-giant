@@ -10,17 +10,31 @@ A little program that:
    ```
    <sup>can be used as a sidecar container?</sup>
    
-1. Acts as S3 proxy with predicate pushdown modern tools:
+1. Acts as S3 proxy with predicate pushdown:
 
    ```shell
    # clickhouse
    $ curl https://clickhouse.com | sh
-   $ ./clickhouse local -q "select `timestamp`, `value` from s3('https://little-giant.fly.dev/http_requests_total?job=webserver') where `timestamp` > now() - interval '7 days'"
-   # duckdb (used in in-browser reports as wasm)
-   $ brew install duckdb
-   $ duckdb -c "select "
-   # polars, pandas, etc.
+   $ ./clickhouse local
    ```
+   ```sql
+   select `timestamp`, `value`
+   from s3('https://little-giant.fly.dev/http_requests_total?job=webserver')
+   where `timestamp` > now() - interval '7 days';
+   ```
+   ```shell
+   # duckdb
+   $ brew install duckdb
+   $ duckdb
+   ```
+   ```sql
+   select timestamp, value
+   from parquet_scan('https://little-giant.fly.dev/http_requests_total?job=webserver')
+   where timestamp > now() - interval '7 days';
+   ```
+
+   > [!NOTE]
+   > duckdb-wasm is used in markdown reports (see below)
    
 1. Renders markdown reports and dashboards:
 
