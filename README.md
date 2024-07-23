@@ -8,12 +8,18 @@ A little program that:
    # scrape itself
    POST https://little-giant.fly.dev/scrape/little-giant.fly.dev/metrics
    ```
+   <sup>can be used as a sidecar container?</sup>
    
-1. Acts as S3 proxy with predicate pushdown for ClickHouse queries:
+1. Acts as S3 proxy with predicate pushdown modern tools:
 
    ```console
+   # clickhouse
    $ curl https://clickhouse.com | sh
    $ ./clickhouse local -q "select `timestamp`, `value` from s3('https://little-giant.fly.dev/http_requests_total?job=webserver') where `timestamp` > now() - interval '7 days'"
+   # duckdb (used in in-browser reports as wasm)
+   $ brew install duckdb
+   $ duckdb -c "select "
+   # polars, pandas, etc.
    ```
    
 1. Renders markdown reports and dashboards:
