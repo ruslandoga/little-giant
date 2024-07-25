@@ -25,7 +25,7 @@ A little program that:
    from 's3://little-giant.fly.dev/http_requests_rate?job=webserver'
    where timestamp > now() - interval '7 days';
    
-   select label, date_trunc('hour', timestamp, ) as hour, avg(value)
+   select label, date_trunc('hour', timestamp) as hour, avg(value)
    from 's3://little-giant.fly.dev/http_requests_rate'
    where label like 'job=%' and timestamp > now() - interval 7 day
    group by label, hour
