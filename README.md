@@ -20,6 +20,8 @@ A little program that:
    where `timestamp` > now() - interval '7 days';
    
    # duckdb
+   install httpfs;
+   load httpfs;
    
    select timestamp, value
    from 's3://little-giant.fly.dev/http_requests_rate?job=webserver'
