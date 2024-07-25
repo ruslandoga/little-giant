@@ -19,7 +19,7 @@ A little program that:
    ```
    ```sql
    select `timestamp`, `value`
-   from s3('https://little-giant.fly.dev/http_requests_total?job=webserver')
+   from s3('https://little-giant.fly.dev/http_requests_total.native?job=webserver')
    where `timestamp` > now() - interval '7 days';
    ```
    ```shell
