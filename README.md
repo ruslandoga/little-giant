@@ -29,7 +29,7 @@ A little program that:
    ```
    ```sql
    select timestamp, value
-   from parquet_scan('https://little-giant.fly.dev/http_requests_total?job=webserver')
+   from 'https://little-giant.fly.dev/http_requests_total.parquet?job=webserver'
    where timestamp > now() - interval '7 days';
    ```
 
