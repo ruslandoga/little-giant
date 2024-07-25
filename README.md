@@ -12,25 +12,24 @@ A little program that:
    
 1. Acts as S3 proxy with predicate pushdown:
 
-   ```shell
-   # clickhouse
-   $ curl https://clickhouse.com | sh
-   $ ./clickhouse local
-   ```
    ```sql
+   # clickhouse
+   
    select `timestamp`, `value`
    from s3('https://little-giant.fly.dev/http_requests_rate?job=webserver')
    where `timestamp` > now() - interval '7 days';
-   ```
-   ```shell
+   
    # duckdb
-   $ brew install duckdb
-   $ duckdb
-   ```
-   ```sql
+   
    select timestamp, value
    from 's3://little-giant.fly.dev/http_requests_rate?job=webserver'
    where timestamp > now() - interval '7 days';
+   
+   select label, date_trunc('hour', timestamp, ) as hour, avg(value)
+   from 's3://little-giant.fly.dev/http_requests_rate'
+   where label like 'job=%' and timestamp > now() - interval 7 day
+   group by label, hour
+   order by hour;
    ```
 
    > [!NOTE]
