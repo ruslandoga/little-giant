@@ -12,11 +12,9 @@ A little program that:
    https://github.com/ruslandoga/little-giant/blob/master/explainers/markdown-reports.md
    https://github.com/ruslandoga/little-giant/blob/master/explainers/markdown-dashboards.md
 
----
-
-   tl;dr: "free" metrics for the desperate, but then..
-
----
+---------------------------------------------------
+tl;dr: "free" metrics for the desperate, but then..
+---------------------------------------------------
 
 5. ingests logs and traces (also to S3)
    https://github.com/ruslandoga/little-giant/blob/master/explainers/vector-sinks.md
@@ -34,8 +32,8 @@ A little program that:
 Anywho, FAQ
 -----------
 
-~ ALERTS?
-~ GITHUB ACTIONS FOR THE DESPERATE: 
+~ Q: ALERTS?
+~ A: GITHUB ACTIONS:
   - download DuckDB or ClickHouse
   - compute a scalar value and check if it exceeds a threshold
   - exit 1 if it does, optionally post a message to slack/discord/telegram or open an issue
@@ -43,8 +41,8 @@ Anywho, FAQ
 
 ---
 
-~ Network costs, slow queries?
-~ CDN sandwiches:
+~ Q: network costs, slow queries?
+~ A: CDN sandwiches:
  
      little-giant
            |
@@ -57,14 +55,14 @@ And CDN in front of little-giant keeps the data parts that DuckDB and ClickHouse
 
 If you are not in Europe, try Europe:
 https://little-giant.europe.copycat.fun/render/copycat.fun/everything-dashboard.md
-(Hetzner, BackBlaze, Cloudflare)
+(Hetzner CAX11, BackBlaze B2, Cloudflare Hobby)
 
 If you are in Europe, try Asia:
 https://little-giant.asia.copycat.fun/render/copycat.fun/everything-dashboard.md
-(AWS, S3, CloudFront)
+(AWS t4g.small, S3 Standard, CloudFront)
 
 ---
 
-~ Free tier?
-~ It's for self hosting ...
-  But also, yes: https://github.com/ruslandoga/little-giant/blob/master/explainers/gimme-load.md
+~ Q: free tier?
+~ A: little-giant is to be self-hosted ...
+     ... but also, yes: https://github.com/ruslandoga/little-giant/blob/master/explainers/give-load-test.md
