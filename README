@@ -55,11 +55,11 @@ And CDN in front of little-giant keeps the data parts that DuckDB and ClickHouse
 
 If you are not in Europe, try Europe:
 https://little.europe.copycat.fun/render/copycat.fun/everything-dashboard.md
-(Hetzner CAX11, BackBlaze B2, Cloudflare Hobby)
+(Hetzner CAX11, BackBlaze B2, Cloudflare)
 
 If you are in Europe, try Asia:
 https://little.asia.copycat.fun/render/copycat.fun/everything-dashboard.md
-(AWS t4g.small, S3 Standard, CloudFront)
+(AWS t4g.small, AWS S3 Standard, AWS CloudFront)
 
 ---
 
