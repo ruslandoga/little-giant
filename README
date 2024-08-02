@@ -54,15 +54,15 @@ CDN in front of S3 (e.g. CloudFront) eats the bandwidth costs.
 And CDN in front of little-giant keeps the data parts that DuckDB and ClickHouse operate on.
 
 If you are not in Europe, try Europe:
-https://little-giant.europe.copycat.fun/render/copycat.fun/everything-dashboard.md
+https://little.europe.copycat.fun/render/copycat.fun/everything-dashboard.md
 (Hetzner CAX11, BackBlaze B2, Cloudflare Hobby)
 
 If you are in Europe, try Asia:
-https://little-giant.asia.copycat.fun/render/copycat.fun/everything-dashboard.md
+https://little.asia.copycat.fun/render/copycat.fun/everything-dashboard.md
 (AWS t4g.small, S3 Standard, CloudFront)
 
 ---
 
-~ Q: free tier?
-~ A: little-giant is to be self-hosted ...
-     ... but also, yes: https://github.com/ruslandoga/little-giant/blob/master/explainers/give-load-test.md
+~ Q: FREE tier?
+~ A: little-giant is to be SELF-hosted ...
+     ... but also, YES: https://github.com/ruslandoga/little-giant/blob/master/explainers/give-load-test.md
