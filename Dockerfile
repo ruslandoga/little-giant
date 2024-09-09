@@ -40,7 +40,7 @@ RUN mix release
 # APP #
 #######
 
-FROM alpine:3.20.2 AS app
+FROM alpine:3.20.3 AS app
 LABEL maintainer="copycat.fun <hey@copycat.fun>"
 
 ARG GIT_SHA
