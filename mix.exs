@@ -30,6 +30,9 @@ defmodule L.MixProject do
       {:benchee, "~> 1.3", only: :bench},
       {:finch, "~> 0.19.0"},
       {:phoenix, "~> 1.7.14"},
+      {:phoenix_html, "~> 4.1"},
+      {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:phoenix_live_view, "~> 1.0.0"},
       {:bandit, "~> 1.5"}
     ]
   end
