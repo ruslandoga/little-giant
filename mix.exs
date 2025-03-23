@@ -28,7 +28,9 @@ defmodule L.MixProject do
       {:telemetry_metrics, "~> 1.0"},
       {:s3, "~> 0.1.0"},
       {:benchee, "~> 1.3", only: :bench},
-      {:finch, "~> 0.19.0"}
+      {:finch, "~> 0.19.0"},
+      {:phoenix, "~> 1.7.14"},
+      {:bandit, "~> 1.5"}
     ]
   end
 
