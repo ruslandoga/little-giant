@@ -40,13 +40,13 @@ RUN mix release
 # APP #
 #######
 
-FROM alpine:3.20.2 AS app
-LABEL maintainer="Ruslan Doga <little.docker@edify.space>"
+FROM alpine:3.20.3 AS app
+LABEL maintainer="Ruslan Doga <ruslandoga+lg@icloud.com>"
 
 ARG GIT_SHA
 ENV GIT_SHA=$GIT_SHA
 
-RUN adduser -S -H -u 999 -G nogroup little_giant
+RUN adduser -S -H -u 999 -G nogroup little-giant
 RUN apk add --no-cache --update openssl libgcc libstdc++ ncurses
 
 COPY --from=build /app/_build/prod/rel/little-giant /app
