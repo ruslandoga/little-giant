@@ -2,7 +2,7 @@
 # BUILD #
 #########
 
-FROM hexpm/elixir:1.17.2-erlang-27.0-alpine-3.20.1 AS build
+FROM hexpm/elixir:1.17.3-erlang-27.1-alpine-3.20.3 AS build
 
 # install build dependencies
 RUN apk add --no-cache --update git build-base nodejs npm brotli zstd
@@ -41,17 +41,17 @@ RUN mix release
 #######
 
 FROM alpine:3.20.3 AS app
-LABEL maintainer="copycat.fun <hey@copycat.fun>"
+LABEL maintainer="Ruslan Doga <ruslandoga+lg@icloud.com>"
 
 ARG GIT_SHA
 ENV GIT_SHA=$GIT_SHA
 
-RUN adduser -S -H -u 999 -G nogroup little_giant
+RUN adduser -S -H -u 999 -G nogroup little-giant
 RUN apk add --no-cache --update openssl libgcc libstdc++ ncurses
 
-COPY --from=build /app/_build/prod/rel/little_giant /app
+COPY --from=build /app/_build/prod/rel/little-giant /app
 
 USER 999
 WORKDIR /app
 
-CMD ["/app/bin/little_giant", "start"]
+CMD ["/app/bin/little-giant", "start"]
