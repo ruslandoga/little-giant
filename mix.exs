@@ -5,7 +5,7 @@ defmodule L.MixProject do
     [
       app: :little_giant,
       version: "0.1.0",
-      elixir: "~> 1.17",
+      elixir: "~> 1.18",
       start_permanent: Mix.env() == :prod,
       releases: releases(),
       deps: deps()
@@ -26,7 +26,8 @@ defmodule L.MixProject do
       {:telemetry_poller, "~> 1.1"},
       {:telemetry_metrics, "~> 1.0"},
       {:s3, "~> 0.1.0"},
-      {:benchee, "~> 1.3", only: :bench}
+      {:benchee, "~> 1.3", only: :bench},
+      {:finch, "~> 0.19.0"}
     ]
   end
 
