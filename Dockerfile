@@ -40,7 +40,7 @@ RUN mix release
 # APP #
 #######
 
-FROM alpine:3.20.3 AS app
+FROM alpine:3.21.3 AS app
 LABEL maintainer="Ruslan Doga <ruslandoga+lg@icloud.com>"
 
 ARG GIT_SHA
