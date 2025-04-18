@@ -1,0 +1,68 @@
+A little program that:
+
+1. scrapes or ingests Prometheus metrics and saves the samples in a compact format to S3
+   https://github.com/ruslandoga/little-giant/blob/master/explainers/prometheus-pull.md
+   https://github.com/ruslandoga/little-giant/blob/master/explainers/prometheus-push.md
+
+2. pretends to be S3 with predicate pushdown for ClickHouse and DuckDB
+   https://github.com/ruslandoga/little-giant/blob/master/explainers/clickhouse-local.md
+   https://github.com/ruslandoga/little-giant/blob/master/explainers/duckdb.md
+
+3. renders markdown reports and dashboards with WASM
+   https://github.com/ruslandoga/little-giant/blob/master/explainers/markdown-reports.md
+   https://github.com/ruslandoga/little-giant/blob/master/explainers/markdown-dashboards.md
+
+---------------------------------------------------
+tl;dr: "free" metrics for the desperate, but then..
+---------------------------------------------------
+
+5. ingests logs and traces (also to S3)
+   https://github.com/ruslandoga/little-giant/blob/master/explainers/vector-sinks.md
+
+6. pretends to be Sentry
+   https://github.com/ruslandoga/little-giant/blob/master/explainers/am-i-sentry.md
+
+7. 8. 9. etc. TODO.
+
+   little-giant could
+   and didn't stop to
+   think if it should
+
+-----------
+Anywho, FAQ
+-----------
+
+~ Q: ALERTS?
+~ A: GITHUB ACTIONS:
+  - download DuckDB or ClickHouse
+  - compute a scalar value and check if it exceeds a threshold
+  - exit 1 if it does, optionally post a message to slack/discord/telegram or open an issue
+  - more ideas: https://github.com/ruslandoga/little-giant/blob/master/explainers/where-alerts-at.md
+
+---
+
+~ Q: network costs, slow queries?
+~ A: CDN sandwiches:
+ 
+     little-giant
+           |
+          CDN
+         /   \
+       S3   client
+
+CDN in front of S3 (e.g. CloudFront) eats the bandwidth costs.
+And CDN in front of little-giant keeps the data parts that DuckDB and ClickHouse operate on.
+
+If you are not in Europe, try Europe:
+https://ruslandoga.github.io/little-giant-render?endpoint=little.europe.edify.space#gist:123
+(Hetzner CAX11, BackBlaze B2, Cloudflare)
+
+If you are in Europe, try Asia:
+https://ruslandoga.github.io/little-giant-render?endpoint=little.asia.edify.space#gist=123
+(AWS t4g.small, AWS S3 Standard, AWS CloudFront)
+
+---
+
+~ Q: FREE tier?
+~ A: little-giant is to be SELF-hosted ...
+     ... but also, YES: https://github.com/ruslandoga/little-giant/blob/master/explainers/give-load-test.md
