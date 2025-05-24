@@ -22,7 +22,7 @@ tl;dr: "free" metrics for the desperate, but then..
 6. pretends to be Sentry
    https://github.com/ruslandoga/little-giant/blob/master/explainers/am-i-sentry.md
 
-7. 8. 9. etc. TODO.
+7. 8. 9. etc. TODO: LLM big, big context; profiling, otel, logs, traces, !!! plugins, VSCode !!!
 
    little-giant could
    and didn't stop to
