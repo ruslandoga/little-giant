@@ -22,7 +22,7 @@ tl;dr: "free" metrics for the desperate, but then..
 6. pretends to be Sentry
    https://github.com/ruslandoga/little-giant/blob/master/explainers/am-i-sentry.md
 
-7. 8. 9. etc. TODO.
+7. 8. 9. etc. TODO: LLM big, big context; profiling, otel, logs, traces, !!! plugins, VSCode !!!
 
    little-giant could
    and didn't stop to
@@ -50,19 +50,18 @@ Anywho, FAQ
          /   \
        S3   client
 
-CDN in front of S3 (e.g. CloudFront) eats the bandwidth costs.
-And CDN in front of little-giant keeps the data parts that DuckDB and ClickHouse operate on.
+CDN in front of S3 (e.g. CloudFront) eats the egress costs.
+And CDN in front of little-giant keeps the data parts that local DuckDB and ClickHouse operate on.
 
 If you are not in Europe, try Europe:
-https://ruslandoga.github.io/little-giant-render?endpoint=little.europe.edify.space#gist:123
+https://ruslandoga.github.io/little-giant-render?endpoint=luigi.edify.space&gist=123
 (Hetzner CAX11, BackBlaze B2, Cloudflare)
 
 If you are in Europe, try Asia:
-https://ruslandoga.github.io/little-giant-render?endpoint=little.asia.edify.space#gist=123
+https://ruslandoga.github.io/little-giant-render?endpoint=ruiji.edify.space&gist=123
 (AWS t4g.small, AWS S3 Standard, AWS CloudFront)
 
 ---
 
 ~ Q: FREE tier?
-~ A: little-giant is to be SELF-hosted ...
-     ... but also, YES: https://github.com/ruslandoga/little-giant/blob/master/explainers/give-load-test.md
+~ A: little-giant is to be SELF-hosted
